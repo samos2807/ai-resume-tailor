@@ -483,11 +483,11 @@ def build_cv(cv_data, keywords=None, footer_placement="bottom"):
 
     if projects_custom:
         for idx, proj in enumerate(projects_custom):
+            if idx == 0 and footer_placement == "under_first_project":
+                _add_footer_line(doc)
             _add_project_header(doc, proj['title'], proj.get('meta', ''))
             for bullet in proj.get('bullets', []):
                 _add_checkmark_bullet(doc, bullet, keywords)
-            if idx == 0 and footer_placement == "under_first_project":
-                _add_footer_line(doc)
     else:
         project_order = cv_data.get("project_order", ["riscv", "fatigue", "vlsi_lab"])
         project_expansion = cv_data.get("project_expansion", {})
@@ -504,6 +504,8 @@ def build_cv(cv_data, keywords=None, footer_placement="bottom"):
             proj = PROJECTS.get(proj_key)
             if not proj: continue
             expansion = project_expansion.get(proj_key, "full" if proj_key in ("riscv", "fatigue") else "medium")
+            if idx == 0 and footer_placement == "under_first_project":
+                _add_footer_line(doc)
             _add_project_header(doc, proj['title'], proj.get('meta', ''))
             if expansion == "compressed":
                 _add_checkmark_bullet(doc, proj["bullet_compressed"], keywords)
@@ -519,8 +521,6 @@ def build_cv(cv_data, keywords=None, footer_placement="bottom"):
                     bullets = bullets[:2]
                 for bullet in bullets:
                     _add_checkmark_bullet(doc, bullet, keywords)
-            if idx == 0 and footer_placement == "under_first_project":
-                _add_footer_line(doc)
 
     # ════════════ EDUCATION ════════════
     _add_section_header(doc, "EDUCATION")
