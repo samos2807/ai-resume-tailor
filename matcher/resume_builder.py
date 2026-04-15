@@ -324,7 +324,20 @@ def _add_section_header(doc, text):
     run.font.name = FONT_NAME
 
 
-def build_cv(cv_data, keywords=None):
+def _add_footer_line(doc):
+    p_foot = doc.add_paragraph()
+    p_foot.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p_foot.paragraph_format.space_before = Pt(3)
+    p_foot.paragraph_format.space_after = Pt(0)
+    r_foot = p_foot.add_run("AI-tailored by a system I built — ")
+    r_foot.italic = True
+    r_foot.font.size = Pt(8)
+    r_foot.font.name = FONT_NAME
+    r_foot.font.color.rgb = RGBColor(0x55, 0x55, 0x55)
+    _add_hyperlink(p_foot, "https://github.com/samos2807/ai-resume-tailor", "samos2807/ai-resume-tailor", font_size=Pt(8))
+
+
+def build_cv(cv_data, keywords=None, footer_placement="bottom"):
     keywords = keywords or []
     doc = Document()
 
@@ -469,10 +482,12 @@ def build_cv(cv_data, keywords=None):
                 run.font.color.rgb = BLK
 
     if projects_custom:
-        for proj in projects_custom:
+        for idx, proj in enumerate(projects_custom):
             _add_project_header(doc, proj['title'], proj.get('meta', ''))
             for bullet in proj.get('bullets', []):
                 _add_checkmark_bullet(doc, bullet, keywords)
+            if idx == 0 and footer_placement == "under_first_project":
+                _add_footer_line(doc)
     else:
         project_order = cv_data.get("project_order", ["riscv", "fatigue", "vlsi_lab"])
         project_expansion = cv_data.get("project_expansion", {})
@@ -485,7 +500,7 @@ def build_cv(cv_data, keywords=None):
                   "physical_design": "physical_design", "fpga_embedded": "default",
                   "analog": "physical_design"}
         bullet_type = jt_map.get(coursework_key, "default")
-        for proj_key in project_order[:3]:
+        for idx, proj_key in enumerate(project_order[:3]):
             proj = PROJECTS.get(proj_key)
             if not proj: continue
             expansion = project_expansion.get(proj_key, "full" if proj_key in ("riscv", "fatigue") else "medium")
@@ -504,6 +519,8 @@ def build_cv(cv_data, keywords=None):
                     bullets = bullets[:2]
                 for bullet in bullets:
                     _add_checkmark_bullet(doc, bullet, keywords)
+            if idx == 0 and footer_placement == "under_first_project":
+                _add_footer_line(doc)
 
     # ════════════ EDUCATION ════════════
     _add_section_header(doc, "EDUCATION")
@@ -588,17 +605,9 @@ def build_cv(cv_data, keywords=None):
     run.font.name = FONT_NAME
     run.font.color.rgb = BLK
 
-    # ════════════ FOOTER — AI-tailored note ════════════
-    p_foot = doc.add_paragraph()
-    p_foot.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    p_foot.paragraph_format.space_before = Pt(3)
-    p_foot.paragraph_format.space_after = Pt(0)
-    r_foot = p_foot.add_run("This CV was AI-tailored by a system I built — analyzes the job and matches it to my profile. Source: ")
-    r_foot.italic = True
-    r_foot.font.size = Pt(8)
-    r_foot.font.name = FONT_NAME
-    r_foot.font.color.rgb = RGBColor(0x55, 0x55, 0x55)
-    _add_hyperlink(p_foot, "https://github.com/samos2807/ai-resume-tailor", "github.com/samos2807/ai-resume-tailor", font_size=Pt(8))
+    # ════════════ FOOTER — AI-tailored note (bottom placement) ════════════
+    if footer_placement == "bottom":
+        _add_footer_line(doc)
 
     # ════════════ POST-PROCESS BOLD ════════════
     if keywords:
