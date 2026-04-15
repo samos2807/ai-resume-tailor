@@ -1,0 +1,590 @@
+═══════════════════════════════════════════
+AMOS SARUSI — CV GENERATION SYSTEM (COMPLETE)
+Paste this as the FIRST message in every new CV conversation.
+═══════════════════════════════════════════
+
+## WHO I AM
+- Name: Amos Sarusi
+- Email: samos2807@gmail.com
+- Phone: 054-5449594
+- LinkedIn: https://www.linkedin.com/in/amos-sarusi-727827275/
+- GitHub: https://github.com/samos2807
+- Education: B.Sc. Electrical Engineering, Ariel University, 2021-2025, GPA 84
+- Military: Tank Commander & Company Sergeant Major, IDF Armored Corps, 2018-2020
+- Target: Junior hardware roles (FPGA, RTL, Verification, Physical Design, DFT, Embedded, Application Engineer) in Israel
+
+═══════════════════════════════════════════
+MY REAL PROJECTS (from GitHub + Lab Report)
+═══════════════════════════════════════════
+
+### PROJECT 1: RISC-V Pipelined Processor
+GitHub: https://github.com/samos2807/riscv-pipeline
+- 11 Verilog modules: riscv_core, alu, controller, decoder, alu_decoder, regfile, imm_gen, forwarding_unit, hazard_detection_unit, pc, imem, dmem
+- 3 testbenches with 6 test scenarios in Vivado simulation
+- 3 Tcl scripts: syn_genus.tcl, genus_sta.tcl, import_virtuoso.tcl
+- Full RTL-to-GDS flow: Genus synthesis → Virtuoso layout → DRC clean → GDS streamout
+- Results: 102.3 MHz, WNS +222ps, 7519 cells, 0 violations
+- Languages: 53% Tcl, 47% Verilog
+- Tools: Xilinx Vivado, Cadence Genus, Cadence Innovus, Cadence Virtuoso, Cadence PVS
+- PDK: GPDK045 45nm
+
+### PROJECT 2: Driver Drowsiness Detection on FPGA
+GitHub: https://github.com/samos2807/Driver-Drowsiness-FPGA
+- Trained MobileNetV2 in PyTorch (99.86% accuracy)
+- Quantized FP32 → INT8 using Vitis AI (73% size reduction, 0.06% accuracy loss)
+- Compiled for DPU B4096 on Xilinx Kria KR260
+- Built complete Python application: DPU inference (~5ms), EAR with dlib 68 landmarks, head drop tracking, 10-frame temporal fusion with hysteresis
+- Performance: 10-12 FPS, 640x480, <15W
+- Debugged critical preprocessing bug (wrong normalization → 100% false drowsy → fixed by matching ImageNet mean/std)
+- System: PetaLinux, DPU overlay, V4L2, VART runtime
+
+### PROJECT 3: Analog VLSI Lab (from lab report, no GitHub)
+All in Cadence Virtuoso, 45nm GPDK045, Spectre simulator.
+Part 1 — CMOS Inverter: β optimization (PMOS 645nm / NMOS 240nm), DC/Transient, Maestro measurements, DRC/LVS/PEX, post-layout simulation with parasitics
+Part 2 — NAND2, Latch, DFF: transistor-level design, M1/M2 routing, T_setup/T_hold/T_cq timing, parametric simulation showing setup violation, full DRC/LVS/PEX
+Part 3 — Ring Oscillator: corner analysis 5 PVT corners (tt/ss/ff/sf/fs) at -40/27/120°C, Monte Carlo 100 runs 97% yield, freq < 4GHz all corners
+Part 4 — Op-Amp: two-stage, slew rate fix using Fingers technique, bandwidth ~7.5MHz, DRC/LVS/PEX
+Tools: Virtuoso, Spectre, ADE/Maestro, Quantus PEX, PVS DRC/LVS
+
+### PROJECT 4: MicroBlaze Embedded System (lowest priority, drop first)
+- Xilinx Vivado, Embedded C, UART/GPIO/SPI, custom IP blocks
+
+═══════════════════════════════════════════
+MY REAL SKILLS (never add tools I haven't used)
+═══════════════════════════════════════════
+
+✅ Verilog, VHDL
+✅ Cadence: Genus, Innovus, Virtuoso, Spectre, PVS, Quantus PEX
+✅ Xilinx Vivado, Vitis AI
+✅ Python, Tcl, Embedded C
+✅ DRC/LVS/PEX
+✅ FPGA, SoC
+✅ Git / GitHub
+
+❌ BANNED FOREVER: Linux, MATLAB, SystemVerilog, UVM, Specman, VCS, Verdi, or ANY tool not listed above
+
+═══════════════════════════════════════════
+HOW TO ANALYZE A JOB (do this BEFORE writing)
+═══════════════════════════════════════════
+
+1. Read the job description
+2. Break into 4 categories:
+   - MUST HAVE (explicit requirements)
+   - DAY TO DAY (responsibilities)
+   - SOFT SKILLS (personality traits)
+   - NICE TO HAVE (preferred/advantage)
+3. For EACH keyword: do I have it? YES → include. NO → don't include, not even "exposure to"
+4. NEVER add a word that doesn't appear in the job description
+5. Show me the analysis table BEFORE generating the CV
+6. If job requires M.Sc. or 3+ years experience → flag clearly and ask before proceeding
+
+═══════════════════════════════════════════
+CV STRUCTURE
+═══════════════════════════════════════════
+
+### HEADER (centered)
+Line 1: Amos Sarusi — font 22, bold, navy (#1A3A5C)
+Line 2: [Job Title from posting] — font 16, bold, navy
+Line 3: 054-5449594 | samos2807@gmail.com | LinkedIn (hyperlink) | GitHub (hyperlink)
+LinkedIn URL: https://www.linkedin.com/in/amos-sarusi-727827275/
+GitHub URL: https://github.com/samos2807
+*** LinkedIn and GitHub MUST be clickable hyperlinks — navy color, no underline ***
+Everything centered.
+
+### ABOUT (4 lines max)
+- Lines 1-2: MUST HAVE requirements, almost their exact words
+- Line 3: Authentic personality — from real motivations, not generic phrases
+  - Use: "Someone who genuinely enjoys...", "stays with a problem until it is solved"
+  - NEVER use: "hands-on experience", "proven ability", "proven track record"
+- Line 4: Company name + what they do + eager to join
+- Start with "B.Sc. Electrical Engineer with..."
+- Do NOT detail projects
+- Do NOT add words not in the job description
+- Each About is UNIQUE per job
+- No em dashes
+- No parentheses
+
+### TECHNICAL SKILLS (exactly 3 lines)
+- Only what they asked + what I have
+- Most relevant category first
+- NO duplicates across lines
+- Bold only keywords from MUST HAVE + DAY TO DAY
+- Never bold: company culture words, location, general adjectives
+
+### PROJECTS (pick 3 of 4)
+Order by relevance to the job:
+- Verification/RTL/ASIC/DFT job → RISC-V first
+- FPGA/Embedded/SoC/Firmware job → Fatigue Detection first
+- Physical Design/Analog/Layout job → VLSI Lab first
+- Application Engineer job → RISC-V first, VLSI Lab second
+- System Integration/Hardware Validation → VLSI Lab first, RISC-V second
+
+Bullet allocation:
+- Most relevant → 3-4 bullets, expanded with job keywords
+- Medium → 2 bullets
+- Least → 1 line
+
+Write IMPACT not tasks. Weave THEIR keywords into YOUR project bullets.
+Bullets start with strong verb: Implemented, Executed, Achieved, Built, Designed, Deployed, Performed.
+
+### EDUCATION
+B.Sc. Electrical Engineering, Ariel University, 2021-2025 | GPA: 84
+Relevant coursework: pick from VLSI Design, Computer Architecture, Digital Systems, Semiconductor Physics
+*** "coursework" — lowercase c ***
+
+### MILITARY SERVICE (exactly 2 SHORT bullets, 1 line each)
+Tank Commander & Company Sergeant Major, IDF Armored Corps, 2018-2020
+- Bullet 1: "Innovative and self-driven leader who commanded a tank crew under pressure, delivering mission-critical results."
+- Bullet 2: "Team player who can articulate well, coordinated across diverse units with strong communication skills."
+*** Weave soft skills from each specific job into these bullets ***
+
+### VOLUNTEERING & HOBBIES
+Volunteering: Provided long-term mentoring and support for a child with special needs.
+Hobbies: Sports, listening to podcasts, cooking
+*** Format: label + text, NO bullets ***
+*** PERMANENT — NEVER change hobbies ***
+
+### LANGUAGES (separate section with own header below Volunteering)
+Hebrew (native), English (proficient)
+
+═══════════════════════════════════════════
+VISUAL DESIGN RULES
+═══════════════════════════════════════════
+
+- Color: Dark navy (#1A3A5C) ONLY for name, title, section headers
+- Body text: pure black (#000000)
+- Separators: dotted gray lines between sections
+- Bullets: ✓ checkmark (bold, font 11) for projects — • bullet for military
+- Bold: ONLY keywords from MUST HAVE + DAY TO DAY. Max 30%
+- Font: Calibri, body size 9.5pt
+- One page only
+- No em dashes — use colon, comma, or restructure
+- No parentheses in About
+- No underlines on headers
+- Breathable spacing between sections
+
+═══════════════════════════════════════════
+BOLD RULES (critical)
+═══════════════════════════════════════════
+
+BOLD: words from MUST HAVE + DAY TO DAY only
+NOT BOLD: Verilog (unless explicitly in job requirements)
+NOT BOLD: company culture words (fast-paced, cutting-edge, world-class)
+NOT BOLD: general adjectives (strong, excellent, advanced)
+NOT BOLD: location, dates, university name
+MAX 30% of text bolded
+
+═══════════════════════════════════════════
+GRAMMAR RULES (check before every save)
+═══════════════════════════════════════════
+
+1. Every sentence must be complete — no fragments
+2. No run-on sentences joined only by commas
+3. Use colon or comma instead of em dash
+4. "data-driven" always hyphenated
+5. No redundant phrasing
+6. Bullets start with strong past-tense verb
+7. No "hands-on experience", "proven ability", "proven track record"
+8. No "having coordinated" — use "coordinated" directly
+9. No em dashes anywhere in the document
+
+═══════════════════════════════════════════
+OUTPUT RULES (every job = 4 files in 1 folder)
+═══════════════════════════════════════════
+
+Folder name: [JobTitle]_[Company]  or  [JobNumber]_[Company]
+Files:
+1. Amos_Sarusi_CV_[Company].pdf       — send to recruiter
+2. Amos_Sarusi_CV_[Company].docx      — edit if needed
+3. Amos_Sarusi_Keywords_[Company].xlsx — keyword analysis table
+4. Cover_Note_[Company].txt           — 3-4 sentences EN + HE translation
+
+Cover Note rules:
+- 3-4 sentences
+- Casual, not too formal
+- Authentic — reference specific thing about company/role
+- Not generic
+- EN first, then HE translation
+
+Keywords table columns:
+Category | Keyword | Do I Have It? | Where in CV | Job Section | Priority
+Color coding: Must Have=red, Day to Day=yellow, Soft Skills=green, Nice to Have=blue
+
+═══════════════════════════════════════════
+QUALITY CHECK (verify ALL before saving)
+═══════════════════════════════════════════
+
+1. Every bold keyword exists in MUST HAVE or DAY TO DAY
+2. No skills I don't have
+3. About doesn't detail projects
+4. About mentions company name + what they do
+5. Skills exactly 3 lines, no duplicates
+6. Military exactly 2 bullets with • not ✓
+7. No banned tools (Linux, MATLAB, SystemVerilog, UVM, Specman, VCS, Verdi)
+8. One page
+9. Header centered
+10. LinkedIn and GitHub are clickable hyperlinks
+11. Hobbies: Sports, listening to podcasts, cooking (NEVER change)
+12. Languages section with own header
+13. ✓ on projects, • on military
+14. No em dashes anywhere
+15. B.Sc. before Electrical Engineer in About
+16. Volunteering and Hobbies: label format, no bullets
+17. "Relevant coursework" — lowercase c
+18. No "hands-on experience" or "proven ability" in About
+19. All bullets start with strong verb
+20. Grammar check passed
+
+═══════════════════════════════════════════
+HOW TO USE
+═══════════════════════════════════════════
+
+When I paste a job description:
+1. Analyze it (4 categories) — show table
+2. Flag if M.Sc. required or 3+ years experience
+3. Propose About with bold markers shown
+4. Wait for my approval
+5. Generate all 4 files in named folder
+6. Add row to Job_Applications_Tracker.xlsx
+
+═══════════════════════════════════════════
+MEMORY UPDATES — CRITICAL FIXES
+═══════════════════════════════════════════
+
+## Fix 1 — LinkedIn and GitHub hyperlinks
+LinkedIn and GitHub in the header MUST be real clickable hyperlinks.
+Navy color (#1A3A5C), no underline, display text "LinkedIn" and "GitHub".
+NEVER plain text. This is non-negotiable.
+
+## Fix 2 — Bold rules (strict)
+- About section: ZERO bold. No bold text anywhere in About.
+- Projects: bold ONLY words that appear verbatim in Must Have or Day to Day job requirements.
+- Never bold: "system architecture", "system-level", "integration" unless explicitly in job requirements word-for-word.
+- Before bolding any word: ask "does this exact word appear in the job description?" If no — do NOT bold.
+
+## Fix 3 — "design reviews"
+Only include "design reviews" if the job explicitly mentions it.
+
+## Fix 4 — Numbers everywhere
+Every bullet must have at least one number. Not just RISC-V — also VLSI and FPGA.
+Examples:
+- "6 circuits designed and verified"
+- "100 Monte Carlo runs, 97% yield"
+- "99.86% accuracy, 73% size reduction, 10-12 FPS, <15W"
+- "5 PVT corners, 3 temperatures"
+- "45fF load, T_setup/T_hold/T_cq all within spec"
+
+## Fix 5 — "So what?" — show the value of results
+Every result needs to answer: why does this matter?
+NOT: "102.3 MHz, 0 violations"
+YES: "102.3 MHz with WNS +222ps and 0 violations — clean signoff, tape-out ready"
+NOT: "97% yield"
+YES: "97% yield across 100 Monte Carlo runs — design margins sufficient for production"
+NOT: "73% size reduction"
+YES: "FP32→INT8 quantization via Vitis AI achieving 73% size reduction with only 0.06% accuracy loss"
+
+## Fix 6 — Ownership language
+Use strong ownership verbs. Recruiters want to see you drove the work, not just participated.
+USE: Led, Owned, Drove, Resolved, Achieved, Delivered, Built, Designed, Implemented
+AVOID: Performed, Participated in, Assisted, Was involved in, Worked on
+
+═══════════════════════════════════════════
+HOW TO SHOW VALUE (think like a recruiter)
+═══════════════════════════════════════════
+
+Recruiters ask 3 questions when reading a CV:
+1. Can this person do the job? (skills match)
+2. Have they done something real? (proof of work)
+3. Did they make a difference? (impact + numbers)
+
+Every bullet should answer at least 2 of these 3 questions.
+
+## Template for strong bullets:
+[Strong verb] + [what you did] + [how/tool] + [result with number] + [so what]
+
+Example:
+WEAK:  "Performed corner analysis and Monte Carlo simulation"
+STRONG: "Validated ring oscillator across 5 PVT corners and 100 Monte Carlo runs, achieving 97% yield — all frequencies within 4 GHz spec across -40°C to 120°C"
+
+## The "So What" test:
+After writing every bullet, ask: "So what? Why should the recruiter care?"
+If you can't answer — add the impact.
+
+## Numbers to always include:
+RISC-V: 11 modules, 3 testbenches, 6 scenarios, 102.3 MHz, WNS +222ps, 7519 cells, 0 violations, 45nm
+VLSI: 6 circuits, 5 PVT corners, 3 temperatures, 100 MC runs, 97% yield, 45fF load, ~7.5 MHz op-amp BW
+FPGA: 99.86% accuracy, 73% size reduction, 0.06% accuracy loss, 10-12 FPS, 640x480, <15W
+
+═══════════════════════════════════════════
+KEYWORD INTELLIGENCE — SYNONYMS + DAY TO DAY
+═══════════════════════════════════════════
+
+## Rule: Don't just copy — understand and expand
+
+When analyzing a job description, identify:
+1. EXACT keywords → use verbatim (for ATS and bold)
+2. SYNONYMS → weave naturally into bullets (don't bold)
+3. DAY TO DAY implied tasks → include even if not stated explicitly
+
+## Common synonym mappings in hardware/EE roles:
+
+| Job says          | Also means / use                          |
+|-------------------|-------------------------------------------|
+| troubleshooting   | debugging, root-cause analysis, diagnosis |
+| verification      | validation, signoff, testing, QA          |
+| scripting         | automation, EDA automation, flow scripting|
+| integration       | bring-up, system integration, assembly    |
+| design            | architecture, implementation, development |
+| analysis          | simulation, characterization, measurement |
+| optimization      | tuning, improvement, enhancement, PPA     |
+| collaboration     | cross-functional, multidisciplinary teams |
+| documentation     | reports, specifications, records          |
+| testing           | validation, characterization, benchmarking|
+| firmware          | embedded software, low-level code         |
+| performance       | speed, throughput, efficiency, PPA        |
+
+## How to apply:
+- If job says "troubleshooting" → bold "troubleshooting" AND naturally include "root-cause analysis" in the same bullet (not bolded)
+- If job says "scripting" → bold "scripting" AND mention "automation" in context
+- If job says "verification" → bold "verification" AND include "signoff" as supporting word
+
+## Day to Day implied tasks (include even if not stated):
+- Any hardware role → assumes: documentation, cross-team collaboration, design reviews
+- Any ASIC/RTL role → assumes: simulation, synthesis, timing analysis
+- Any FPGA role → assumes: flashing, debugging, board bring-up
+- Any validation role → assumes: test plan, regression, coverage
+
+## Example:
+Job: "Experience with debugging and testing of electronic systems"
+WEAK bullet: "Debugged and tested RISC-V processor"
+STRONG bullet: "Resolved timing violations and functional bugs across 6 test scenarios through systematic debugging and root-cause analysis — achieving clean signoff with 0 DRC/LVS violations"
+
+
+═══════════════════════════════════════════
+BOLD SCOPE UPDATE — FULL CV BOLD STRATEGY
+═══════════════════════════════════════════
+
+## Bold appears throughout the ENTIRE CV — not just projects
+
+Bold serves two purposes:
+1. Help the tech lead scan fast and find what matters
+2. Signal professionalism and confidence
+
+## Where to bold:
+
+### Header / Title
+- Job title (already large, no need for bold within it)
+
+### About
+- B.Sc. Electrical Engineering — always bold (appears in almost every job requirement)
+- The specific role keywords that match Must Have — bold them even in About
+- Example: "B.Sc. Electrical Engineer with experience in **RTL design** and **verification**..."
+
+### Technical Skills
+- Category labels: bold (already done)
+- Key tools/concepts that match Must Have: bold within the value
+- Example: "**RTL2GDS flow**, synthesis, **PPA optimization**, signoff STA/DRC/LVS"
+
+### Projects
+- Bold keywords from Must Have + Day to Day (already done)
+- Numbers that prove value: bold the key metric
+- Example: "achieving **102.3 MHz** with **0 violations** — tape-out ready"
+
+### Education
+- B.Sc. Electrical Engineering — bold
+- GPA if strong: bold the number
+- Example: "**B.Sc. Electrical Engineering**, Ariel University, 2021-2025 | GPA: **84**"
+
+### Military
+- Soft skills that match the job's Must Have — bold them
+- Example: "**Led** a tank crew... delivering **mission-critical** results **independently**"
+
+## What NOT to bold:
+- University name, dates, location
+- Generic words: "experience", "strong", "excellent"
+- Synonyms — these go in text without bold
+- More than 30% of any section
+
+## Bold = signal, not decoration
+Every bolded word should answer: "Is this exactly what the recruiter is looking for?"
+If yes → bold. If no → don't.
+
+
+═══════════════════════════════════════════
+BOLD PHILOSOPHY — THE 6-SECOND RULE
+═══════════════════════════════════════════
+
+## The goal of bold
+Bold = highlighter for the human recruiter.
+In 6 seconds their eye jumps to bold text.
+They should see exactly what they were looking for in the job description.
+
+## What to bold — 3 sources:
+1. MUST HAVE — explicit requirements from the job posting
+2. DAY TO DAY — responsibilities listed in the job
+3. SYNONYMS that map directly to job requirements
+   (e.g. job says "troubleshooting" → also bold "root-cause analysis" if it maps directly)
+
+## Bold across the FULL CV:
+- About: bold Must Have keywords + B.Sc. Electrical Engineering
+- Skills: bold the keywords that match Must Have + Day to Day
+- Projects: bold keywords + key numbers that prove the requirement is met
+- Education: bold B.Sc. Electrical Engineering + GPA number
+- Military: bold soft skills that match job requirements
+
+## The test before bolding any word:
+Ask: "If the recruiter sees only the bolded words, will they think:
+      'This person has exactly what we need'?"
+If YES → bold.
+If NO → don't bold.
+
+## Max 30% bold per section — bold loses power if overused.
+
+## Synonyms rule:
+- Job says "troubleshooting" → bold both "troubleshooting" AND "root-cause analysis" if used
+- Job says "verification" → bold "verification" AND "signoff" if used
+- Job says "scripting" → bold "scripting" AND "automation" if used
+- Only bold a synonym if it DIRECTLY maps to a job requirement word
+
+
+═══════════════════════════════════════════
+RULE: LESS IS MORE — NO IRRELEVANT CONTENT
+═══════════════════════════════════════════
+
+Every word in the CV must earn its place by mapping to a job requirement.
+
+## QA check — before finalizing any CV:
+For every sentence, bullet, tool, and skill ask:
+"Does this map to Must Have, Day to Day, Soft Skills, or Nice to Have?"
+If NO → remove it OR replace with something more relevant.
+
+## If nothing relevant exists — leave it out
+Do NOT add content just to fill space.
+Do NOT add tools "because they look good."
+A shorter, tighter CV beats a longer, diluted one.
+
+## Examples of what to cut:
+- Skills: tools the job never mentioned
+- Projects: bullets describing work the job doesn't care about  
+- About: adjectives that don't connect to any requirement
+- Coursework: subjects with no relevance to the role
+
+## The signal-to-noise rule:
+Every irrelevant word reduces the impact of every relevant word.
+3 sharp bullets > 4 bullets where 1 is off-topic.
+
+
+═══════════════════════════════════════════
+STORYTELLING METHOD — CAR + DEEP-TECH KEYWORDS
+═══════════════════════════════════════════
+
+## The Persona
+You are writing for a high-potential junior engineer in the semiconductor industry.
+NOT "experienced engineer" — but "hungry graduate who loves getting hands dirty solving hardware problems."
+Every CV must feel authentic, not corporate.
+
+## The CAR Method — every bullet tells a story
+Do NOT just describe what was done. For every technical bullet use:
+- Challenge: What was the engineering problem?
+- Action: What did the candidate do to solve it?
+- Result: What was the measurable outcome?
+
+WRONG: "Implemented RISC-V processor"
+RIGHT: "Identified and resolved timing violations in forwarding logic, achieving target frequency of 102.3 MHz with WNS +222ps — clean tape-out ready"
+
+WRONG: "Performed corner analysis"
+RIGHT: "Validated ring oscillator stability across 5 PVT corners and 100 Monte Carlo runs, achieving 97% yield — production-ready design margins"
+
+## Deep-Tech Keywords (use these, not generic terms)
+Instead of → Use:
+- "testing" → Functional Verification, corner-case coverage
+- "synthesis process" → RTL2GDS flow, Clock Tree Synthesis (CTS)
+- "performance improvement" → PPA Optimization (Power, Performance, Area)
+- "fixed bug" → resolved timing closure violation, root-cause analysis
+- "simulation" → pre-silicon verification, Spectre simulation
+- "layout" → physical implementation, DRC/LVS signoff
+
+## Hard Data — embed in EVERY version
+Always include these exact numbers:
+- RISC-V: 102.3 MHz, WNS +222ps, 7,519 cells, 0 violations, 45nm
+- FPGA/AI: 99.86% accuracy, 73% size reduction, 0.06% accuracy loss, 10-12 FPS, <15W
+- VLSI: 97% yield, 100 Monte Carlo runs, 5 PVT corners, -40°C to 120°C
+- Op-Amp: ~7.5 MHz bandwidth, Fingers technique, post-layout PEX
+
+## Military — frame as engineering value
+Do NOT write: "commanded soldiers"
+DO write: "managed mission-critical systems under uncertainty, closing operational gaps under strict time constraints"
+
+Frame military service as:
+- Working under pressure in mission-critical environments
+- Leading technical teams with real accountability
+- Systematic problem-solving with zero margin for error
+
+## Company DNA Matching
+When writing for specific companies, adjust emphasis:
+
+INTEL:
+- Emphasize: systematic methodology, full silicon lifecycle, pre-silicon validation
+- Keywords: silicon development lifecycle, RTL2GDS, verification, timing closure
+
+NVIDIA:
+- Emphasize: fast learner of EDA tools, edge performance optimization, bottleneck-hunting mindset
+- Keywords: PPA optimization, performance, GPU architecture awareness, DPU/accelerator
+
+ELBIT / RAFAEL (Defense):
+- Emphasize: system-level thinking, multi-disciplinary integration, mission-critical reliability
+- Keywords: system architecture, integration and verification, hardware validation
+
+APPLIED MATERIALS / KLA (Equipment):
+- Emphasize: testing, calibration, troubleshooting complex systems
+- Keywords: system integration, testing and calibration, multi-disciplinary systems
+
+## About — must be authentic
+WRONG: "experienced engineer with proven track record"
+RIGHT: "hungry graduate who genuinely enjoys getting into the details of hardware problems and staying with them until they're solved"
+
+About formula:
+Line 1-2: Core technical match to Must Have (their words)
+Line 3: Authentic personality — real, not corporate
+Line 4: Why THIS company + what you'll contribute
+
+═══════════════════════════════════════════
+FIXES FROM CV REVIEW — MANDATORY
+═══════════════════════════════════════════
+
+## Fix 1 — RISC-V bullets must differ per job type
+Do NOT use identical RISC-V bullets across all CVs.
+Adapt bullet emphasis to match each job's focus:
+- RTL/Logic Design → emphasize microarchitecture, RTL coding, timing closure
+- Verification → emphasize testbenches, corner-case coverage, functional verification
+- Physical Design → emphasize RTL2GDS flow, P&R, timing analysis, DRC/LVS
+- System Integration → emphasize multi-module integration, end-to-end flow
+
+## Fix 2 — No duplicate bullets
+RISC-V bullets 2 and 3 are the same (Tcl scripts + automation).
+Merge into ONE bullet. Never have two bullets saying the same thing differently.
+
+## Fix 3 — Volunteering format (label, always)
+WRONG: "Provided long-term mentoring and support for a child with special needs"
+RIGHT: "Volunteering: Provided long-term mentoring and support for a child with special needs."
+Always use label format with colon.
+
+## Fix 4 — Military title (exact)
+WRONG: "Promoted to Sergeant Major"
+RIGHT: "Tank Commander & Company Sergeant Major, IDF Armored Corps, 2018-2020"
+Never rephrase the military title. Use exactly as written above.
+
+## Fix 5 — Never include tools not in real_tools list
+Banned tools to NEVER include (not in Amos's profile):
+- Synopsys Design Compiler
+- OpenROAD (Amos is just beginning — do not include)
+- Any tool not in amos_profile.json real_tools list
+
+Exception for OpenROAD: if job explicitly requires it, note as "currently exploring OpenROAD"
+— never claim experience.
+
+## Fix 6 — Irrelevant technical details per role
+Formal Verification CVs: remove deep FPGA/ML technical details (DPU B4096, dlib, temporal fusion)
+— not relevant to formal verification roles.
+Keep FPGA bullet short: 1 line maximum for non-relevant roles.
+

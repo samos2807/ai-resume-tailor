@@ -1,0 +1,120 @@
+{
+  "_README": "This is a SANITIZED example profile. Replace every placeholder with your own data. All personal contact info, university, and GPA are fictional.",
+
+  "personal": {
+    "name": "Your Name",
+    "email": "your.email@example.com",
+    "phone": "+1-555-0100",
+    "linkedin": "https://www.linkedin.com/in/your-handle/",
+    "github": "https://github.com/your-handle",
+    "education": {
+      "degree": "B.Sc. Electrical Engineering",
+      "university": "Example University",
+      "years": "2021-2025",
+      "gpa": "85",
+      "coursework": [
+        "VLSI Design",
+        "Computer Architecture",
+        "Digital Systems",
+        "Semiconductor Physics"
+      ]
+    },
+    "military": {
+      "role": "Your Leadership Role",
+      "unit": "Your Unit / Team",
+      "years": "YYYY-YYYY",
+      "bullets": [
+        "Led a team under pressure, delivering mission-critical results on tight timelines.",
+        "Coordinated across multiple functions with strong communication and problem-solving."
+      ]
+    },
+    "volunteering": "One-line volunteering description (use format: 'Volunteering: <what you did>').",
+    "hobbies": "Short hobby list",
+    "languages": [
+      {"language": "English", "level": "proficient"},
+      {"language": "Other",   "level": "native"}
+    ]
+  },
+
+  "skills": {
+    "real_tools": [
+      "Verilog", "VHDL",
+      "Cadence Genus", "Cadence Innovus", "Cadence Virtuoso",
+      "Xilinx Vivado", "Python", "Tcl", "Embedded C"
+    ],
+    "banned_tools": [
+      "List tools you do NOT know — the AI will never inject these into your CV"
+    ],
+    "concepts": [
+      "RTL2GDS", "synthesis", "place-and-route", "timing closure",
+      "signoff STA", "DRC", "LVS", "PEX", "FPGA", "SoC",
+      "pre-silicon verification", "testbench development"
+    ],
+    "currently_learning": ["OpenROAD"],
+    "currently_learning_note": "Do not include in CV unless job requires it."
+  },
+
+  "projects": [
+    {
+      "id": "riscv",
+      "name": "RISC-V Pipelined Processor (Example)",
+      "tags": ["RTL", "Verilog", "ASIC", "synthesis", "P&R", "signoff", "verification"],
+      "tools": "Verilog, Cadence Genus/Innovus/Virtuoso, 45nm GPDK",
+      "highlights": {
+        "modules": 11,
+        "testbenches": 3,
+        "frequency": "102.3 MHz",
+        "wns": "+222ps",
+        "cells": 7519,
+        "violations": 0,
+        "process": "45nm"
+      },
+      "bullets": {
+        "rtl_verification": "Implemented 11 RTL modules in Verilog; executed 3 testbenches covering 6 scenarios; debugged all functional issues.",
+        "flow": "Ran full RTL2GDS flow with Cadence Genus/Innovus; achieved GDS streamout on 45nm.",
+        "signoff": "Clean STA/DRC/LVS/PEX signoff: 102.3 MHz, WNS +222ps, 7,519 cells, 0 violations."
+      }
+    },
+    {
+      "id": "analog_vlsi",
+      "name": "Analog VLSI Lab (Example)",
+      "tags": ["analog", "CMOS", "DRC", "LVS", "PEX", "physical design"],
+      "tools": "Cadence Virtuoso, Spectre, Quantus PEX, 45nm",
+      "highlights": {
+        "circuits": 6,
+        "corners": 5,
+        "monte_carlo_runs": 100,
+        "yield": "97%",
+        "process": "45nm"
+      },
+      "bullets": {
+        "design": "Designed 6 CMOS circuits from transistor level through full DRC/LVS/PEX signoff.",
+        "corners": "Corner analysis across 5 PVT corners and 100 Monte Carlo runs — 97% yield.",
+        "debug": "Identified and resolved slew-rate limitation in op-amp via Fingers technique."
+      }
+    },
+    {
+      "id": "fpga_ml",
+      "name": "FPGA Machine-Learning Accelerator (Example)",
+      "tags": ["FPGA", "SoC", "Python", "ML", "embedded"],
+      "tools": "Xilinx FPGA board, Vitis AI, PyTorch",
+      "highlights": {
+        "accuracy": "99.86%",
+        "quantization": "FP32 to INT8",
+        "size_reduction": "73%",
+        "fps": "10-12",
+        "power": "<15W"
+      },
+      "bullets": {
+        "deploy": "Quantized model FP32 to INT8 (73% size reduction); deployed on FPGA SoC at 10-12 FPS.",
+        "debug": "Resolved preprocessing bug causing 100% false detection via systematic root-cause analysis."
+      }
+    }
+  ],
+
+  "_usage_notes": [
+    "Add projects with their own 'id', 'tags', 'tools', 'highlights', 'bullets'.",
+    "Every bullet should include at least one number — the QA agent enforces this.",
+    "Keep 'banned_tools' honest — the system will never claim you know a tool listed here."
+  ]
+}
