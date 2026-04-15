@@ -326,15 +326,15 @@ def _add_section_header(doc, text):
 
 def _add_footer_line(doc):
     p_foot = doc.add_paragraph()
-    p_foot.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p_foot.alignment = WD_ALIGN_PARAGRAPH.LEFT
     p_foot.paragraph_format.space_before = Pt(3)
     p_foot.paragraph_format.space_after = Pt(0)
     r_foot = p_foot.add_run("AI-tailored by a system I built — ")
     r_foot.italic = True
-    r_foot.font.size = Pt(8)
+    r_foot.font.size = Pt(10)
     r_foot.font.name = FONT_NAME
     r_foot.font.color.rgb = RGBColor(0x55, 0x55, 0x55)
-    _add_hyperlink(p_foot, "https://github.com/samos2807/ai-resume-tailor", "samos2807/ai-resume-tailor", font_size=Pt(8))
+    _add_hyperlink(p_foot, "https://github.com/samos2807/ai-resume-tailor", "CV-building agent", font_size=Pt(10))
 
 
 def build_cv(cv_data, keywords=None, footer_placement="bottom"):
