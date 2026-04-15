@@ -52,7 +52,7 @@ BULLET_SIZE = Pt(BULLET_PT)
 EDUCATION_SIZE = Pt(BODY_PT)
 
 # ── Spacing ──
-SECTION_AFTER = Pt(4)
+SECTION_AFTER = Pt(8)
 BULLET_AFTER = Pt(1)
 PROJECT_TITLE_BEFORE = Pt(10)
 LINE_SPACING = Pt(LINE_SPACING_PT)
@@ -587,6 +587,18 @@ def build_cv(cv_data, keywords=None):
     run.font.size = BODY_SIZE
     run.font.name = FONT_NAME
     run.font.color.rgb = BLK
+
+    # ════════════ FOOTER — AI-tailored note ════════════
+    p_foot = doc.add_paragraph()
+    p_foot.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p_foot.paragraph_format.space_before = Pt(8)
+    p_foot.paragraph_format.space_after = Pt(0)
+    r_foot = p_foot.add_run("This CV was tailored using an AI-driven system I built — analyzes the job and matches it to my profile. Full system: ")
+    r_foot.italic = True
+    r_foot.font.size = Pt(8.5)
+    r_foot.font.name = FONT_NAME
+    r_foot.font.color.rgb = RGBColor(0x55, 0x55, 0x55)
+    _add_hyperlink(p_foot, "https://github.com/samos2807/ai-resume-tailor", "github.com/samos2807/ai-resume-tailor", font_size=Pt(8.5))
 
     # ════════════ POST-PROCESS BOLD ════════════
     if keywords:
