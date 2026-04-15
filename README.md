@@ -50,24 +50,6 @@ Job Description
 
 ---
 
-## The 21 Rules
-
-The QA agent blocks any CV that violates these. Summarized highlights — full list in [`CV-MASTER-RULES-UPDATED.txt`](./CV-MASTER-RULES-UPDATED.txt):
-
-1. **CAR method** — every project bullet is Challenge → Action → Result, with measurable outcome and "so what"
-2. **Numbers everywhere** — every bullet has at least one concrete number (frequency, cells, yield, FPS, accuracy...)
-3. **Ownership verbs** — Led, Owned, Drove, Resolved, Achieved, Delivered. Never Performed / Participated / Assisted
-4. **Bold the exact job keywords** — if the posting says "troubleshooting", I bold `troubleshooting` (not "debugging"). Max 30% bold per section
-5. **One page** — enforced by layout constants
-6. **No banned tools** — each profile declares tools it will never claim to know; the AI cannot inject them
-7. **Hyperlinks clickable** — LinkedIn + GitHub always render as links, never plain text
-8. **Military title verbatim** — always the exact string, no paraphrasing
-9. **Volunteering label format** — `Volunteering: <description>`
-10. **GPA honest** — never inflated to meet a posting's cutoff. If the cutoff is 85 and mine is 84, the cover note addresses it honestly
-11. **Every word maps to a job requirement** — Rule 21: if a sentence doesn't map to Must-Have / Day-to-Day / Soft Skills / Nice-to-Have, it's cut
-
----
-
 ## Keyword Intelligence
 
 The analyzer distinguishes three tiers:
