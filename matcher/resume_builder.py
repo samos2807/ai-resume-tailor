@@ -324,20 +324,7 @@ def _add_section_header(doc, text):
     run.font.name = FONT_NAME
 
 
-def _add_footer_line(doc):
-    p_foot = doc.add_paragraph()
-    p_foot.alignment = WD_ALIGN_PARAGRAPH.LEFT
-    p_foot.paragraph_format.space_before = Pt(3)
-    p_foot.paragraph_format.space_after = Pt(0)
-    r_foot = p_foot.add_run("AI-tailored by a system I built — ")
-    r_foot.italic = True
-    r_foot.font.size = Pt(10)
-    r_foot.font.name = FONT_NAME
-    r_foot.font.color.rgb = RGBColor(0x55, 0x55, 0x55)
-    _add_hyperlink(p_foot, "https://github.com/samos2807/ai-resume-tailor", "CV-building agent", font_size=Pt(10))
-
-
-def build_cv(cv_data, keywords=None, footer_placement="bottom"):
+def build_cv(cv_data, keywords=None):
     keywords = keywords or []
     doc = Document()
 
@@ -483,8 +470,6 @@ def build_cv(cv_data, keywords=None, footer_placement="bottom"):
 
     if projects_custom:
         for idx, proj in enumerate(projects_custom):
-            if idx == 0 and footer_placement == "under_first_project":
-                _add_footer_line(doc)
             _add_project_header(doc, proj['title'], proj.get('meta', ''))
             for bullet in proj.get('bullets', []):
                 _add_checkmark_bullet(doc, bullet, keywords)
@@ -504,8 +489,6 @@ def build_cv(cv_data, keywords=None, footer_placement="bottom"):
             proj = PROJECTS.get(proj_key)
             if not proj: continue
             expansion = project_expansion.get(proj_key, "full" if proj_key in ("riscv", "fatigue") else "medium")
-            if idx == 0 and footer_placement == "under_first_project":
-                _add_footer_line(doc)
             _add_project_header(doc, proj['title'], proj.get('meta', ''))
             if expansion == "compressed":
                 _add_checkmark_bullet(doc, proj["bullet_compressed"], keywords)
@@ -604,10 +587,6 @@ def build_cv(cv_data, keywords=None, footer_placement="bottom"):
     run.font.size = BODY_SIZE
     run.font.name = FONT_NAME
     run.font.color.rgb = BLK
-
-    # ════════════ FOOTER — AI-tailored note (bottom placement) ════════════
-    if footer_placement == "bottom":
-        _add_footer_line(doc)
 
     # ════════════ POST-PROCESS BOLD ════════════
     if keywords:
